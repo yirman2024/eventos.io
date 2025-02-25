@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase Gratis - IA para Negocios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background">
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <div class="container">
+        <h1 class="neon-text">🚀 ¡Clase GRATIS! La IA está generando miles en ingresos… ¿y tú aún no la usas? 🤖💰</h1>
+        <p>✅ Automatiza, vende más y escala tu negocio con Inteligencia Artificial.</p>
+        <p>🎁 Asiste y recibe un **Ebook con plantillas de prompts para cualquier nicho**.</p>
+
+        <!-- Botón para abrir el modal -->
+        <button id="abrirModal">¿Qué aprenderás?</button>
+
+
+        <form id="registroForm">
+            <input type="text" id="nombre" placeholder="Tu Nombre" required>
+            <input type="email" id="email" placeholder="Tu Email" required>
+            <input type="tel" id="whatsapp" placeholder="Tu WhatsApp" required>
+            <button type="submit">📲 ¡QUIERO MI ACCESO!</button>
+        </form>
+    </div>
+
+
+    <!-- Modal de urgencia -->
+<div id="modalUrgencia" class="modal">
+    <!-- Contenedor principal del modal -->
+    <div class="modal-content">
+        <!-- Botón para cerrar el modal -->
+        <span class="close">&times;</span>
+
+        <!-- Título del modal con iconos de alerta -->
+        <h2>⚠️ ¡Atención! Mensaje Urgente ⚠️</h2>
+        <p>Cupos limitados Registrate ¡Ahora!</p>
+        <!-- Mensaje informativo -->
+        <p>Este evento comenzará en:</p>
+        
+        <!-- Contenedor del contador con bordes neón -->
+        <div class="contador-container">
+            <!-- Elemento que muestra el tiempo restante -->
+            <span id="contador" class="contador">00:00:30</span>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- Modal -->
+<div id="modalAprendizaje" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Lo que aprenderás en la clase</h2>
+        <ul>
+            <li>✅ Descubre cómo la IA genera miles en ingresos y cómo aplicarla en tu negocio.</li>
+            <li>✅ Aprende estrategias prácticas para automatizar tareas y aumentar productividad.</li>
+            <li>✅ Creacion de camapañs publicitarias con IA.</li>
+            <li>✅ Accede a herramientas y recursos gratuitos para empezar de inmediato.</li>
+            <li>✅ Interacción en vivo y resolución de dudas.</li>
+        </ul>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

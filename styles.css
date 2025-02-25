@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #000;
+    color: white;
+    text-align: center;
+    
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #cc0000;
+}
+
+
+/*-----------------------------------------*/
+
+
+/* ⏳ CONTADOR REGRESIVO */
+.contador-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px auto;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+    animation: glow 1.5s infinite alternate;
+    max-width: 250px; /* 🔹 Reduje el ancho */
+    width: 80%;
+}
+
+
+
+@keyframes glow {
+    from { box-shadow: 0px 0px 10px #00ffea; }
+    to { box-shadow: 0px 0px 20px #ff00ff; }
+}
+
+.contador-titulo {
+    font-size: 18px;
+    color: #ff9900;
+    font-weight: bold;
+}
+
+.contador {
+    font-size: 28px;
+    font-weight: bold;
+    color: #00ffea;
+    text-shadow: 0px 0px 10px #00ffea, 0px 0px 20px #ff00ff;
+}
+
+
+/* Estilos para el modal */
+.modal {
+    display: flex; /* Usa flexbox para centrar contenido */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    position: fixed; /* Fija el modal en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    height: 100%; /* Ocupa todo el alto de la pantalla */
+    background: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
+    backdrop-filter: blur(5px); /* Aplica un efecto difuminado al fondo */
+    z-index: 1000; /* Asegura que el modal esté en la parte superior */
+}
+
+/* Contenedor del modal */
+.modal-content {
+    background: rgba(0, 0, 0, 0.9); /* Fondo oscuro con ligera transparencia */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    text-align: center; /* Centra el texto dentro del modal */
+    width: 490px; /* Ancho del modal */
+    color: white; /* Color del texto */
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3); /* Sombra externa para efecto de brillo */
+    position: relative; /* Permite posicionar elementos dentro del modal */
+    animation: fadeIn 0.5s ease-in-out; /* Aplica la animación de entrada */
+}
+
+/* Botón de cerrar (X) */
+.close {
+    position: absolute; /* Posiciona el botón dentro del modal */
+    top: 10px; /* Distancia desde la parte superior */
+    right: 15px; /* Distancia desde la derecha */
+    font-size: 22px; /* Tamaño del ícono */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar por encima */
+    color: white; /* Color del ícono */
+    transition: 0.3s; /* Suaviza el cambio de color al pasar el cursor */
+}
+
+/* Cambio de color del botón de cerrar al pasar el cursor */
+.close:hover {
+    color: red; /* Cambia el color a rojo */
+}
+
+/* Contenedor del contador */
+.contador-container {
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro con transparencia */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    margin: 10px auto; /* Margen superior e inferior y centrado horizontal */
+    text-align: center; /* Centra el contenido */
+    max-width: 200px; /* Ancho máximo del contador */
+    width: 80%; /* Ajusta el ancho según el tamaño de la pantalla */
+    font-size: 28px; /* Tamaño del texto del contador */
+    font-weight: bold; /* Hace el texto más grueso */
+    color: #00ffea; /* Color azul neón */
+    text-shadow: 0px 0px 10px #00ffea, 0px 0px 20px #ff00ff; /* Efecto de brillo en el texto */
+    box-shadow: 0px 0px 10px #00ffea, 0px 0px 20px #ff00ff; /* Efecto de brillo en el contenedor */
+    animation: glow 1.5s infinite alternate; /* Aplica animación de brillo */
+}
+
+/* Animación de brillo neón */
+@keyframes glow {
+    from { box-shadow: 0px 0px 10px #00ffea; } /* Brillo inicial azul */
+    to { box-shadow: 0px 0px 20px #ff00ff; } /* Brillo más intenso en color magenta */
+}
+
+/* Animación de entrada del modal */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); } /* Modal inicia pequeño y transparente */
+    to { opacity: 1; transform: scale(1); } /* Modal se agranda a su tamaño normal */
+}
+
+
+/*/////////////////////////////////////////////////////////////*/
+/* Estilos del botón */
+#abrirModal {
+    padding: 12px 20px;
+    font-size: 18px;
+    background: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#abrirModal:hover {
+    background: #cc0000;
+}
+
+/* Estilos del modal */
+.modal {
+    display: none; /* Ocultar el modal por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw; /* Asegura que tome todo el ancho */
+    height: 100vh; /* Asegura que tome toda la altura de la pantalla */
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor del modal */
+.modal-content {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 390px;
+    color: white;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+    position: relative;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Botón de cierre */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+.close:hover {
+    color: red;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/*-----------------------------------------------------------*/
+
+/* Estilo de texto neón azul fosforescente */
+.neon-text {
+    font-size: 22px;
+    font-weight: bold;
+    color: #0ff; /* Azul neón */
+    text-align: center;
+    text-shadow: 0px 0px 10px #0ff, 0px 0px 20px #0ff, 0px 0px 40px #0ff;
+    animation: parpadeo 1.5s infinite alternate;
+}
+
+/* Animación de parpadeo */
+@keyframes parpadeo {
+    0% { text-shadow: 0px 0px 5px #0ff, 0px 0px 10px #0ff; }
+    100% { text-shadow: 0px 0px 15px #0ff, 0px 0px 30px #0ff; }
+}
